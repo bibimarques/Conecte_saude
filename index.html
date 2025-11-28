@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conecte Saúde - Hub de Aprendizagem</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img src="assets/logo.svg" alt="Conecta Saúde - Logo" width="300" />
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html" id="link-trilhas">Minhas Trilhas</a>
+            </li>
+            <li>
+              <a href="Cadastro_trilha.html" id="link-cadastro-trilha"
+                >Cadastrar Trilha</a
+              >
+            </li>
+            <li><a href="aluno.html" id="link-alunos">Alunos</a></li>
+            <li><a href="#perfil" id="link-perfil">Meu Perfil</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="trilhas-disponiveis" class="painel-principal">
+        <h2>Trilhas de Aprendizagem Disponíveis</h2>
+        <div id="lista-trilhas" class="grid-trilhas">
+          <div class="card-trilha" data-id="1">
+            <h3>Atenção Primária à Saúde</h3>
+            <p>
+              Aprenda os fundamentos e a importância da APS no sistema de saúde.
+            </p>
+            <p><strong>Objetivo:</strong> Dominar conceitos de APS</p>
+            <button class="btn-ver-trilha">Ver Trilha</button>
+          </div>
+          <div class="card-trilha" data-id="2">
+            <h3>Enfermagem no Cuidado Intensivo</h3>
+            <p>
+              Desenvolva habilidades essenciais para o ambiente de terapia
+              intensiva.
+            </p>
+            <p><strong>Objetivo:</strong> Atuar em UTIs com segurança</p>
+            <button class="btn-ver-trilha">Ver Trilha</button>
+          </div>
+          <div class="card-trilha" data-id="3">
+            <h3>Fisioterapia Respiratória Pediátrica</h3>
+            <p>
+              Técnicas e abordagens para o tratamento respiratório em crianças.
+            </p>
+            <p><strong>Objetivo:</strong> Aplicar técnicas em pediatria</p>
+            <button class="btn-ver-trilha">Ver Trilha</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seção de cadastro movida para página separada: Cadastro_trilha.html -->
+    </main>
+    <script src="Js/trilhas.js"></script>
+    <script src="Js/alunos.js"></script>
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Conecte Saúde. Todos os direitos reservados.</p>
+        <p>
+          Desenvolvido por: [Nome Integrante 1 - HTML e Estrutura], [Nome
+          Integrante 2 - CSS e Estilização], [Nome Integrante 3 - JavaScript
+          Front-end], [Nome Integrante 4 - Back-end e API], [Nome Integrante 5 -
+          Banco de Dados]
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

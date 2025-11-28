@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conecte Saúde - Gerenciamento de Alunos</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img src="assets/logo.svg" alt="Conecte Saúde - Logo" width="300" />
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html" id="link-trilhas">Minhas Trilhas</a>
+            </li>
+            <li>
+              <a href="Cadastro_trilha.html" id="link-cadastro-trilha"
+                >Cadastrar Trilha</a
+              >
+            </li>
+            <li>
+              <a href="aluno.html" id="link-alunos" aria-current="page"
+                >Alunos</a
+              >
+            </li>
+            <li>
+              <a href="#perfil" id="link-perfil">Meu Perfil</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="cadastro-aluno" class="painel-principal">
+        <h2>Cadastrar Novo Aluno</h2>
+        <form id="form-cadastro-aluno" novalidate>
+          <div class="form-grupo">
+            <label for="nome-aluno">Nome Completo:</label>
+            <input
+              type="text"
+              id="nome-aluno"
+              name="nome"
+              required
+              autocomplete="name"
+              aria-required="true"
+            />
+          </div>
+          <div class="form-grupo">
+            <label for="email-aluno">Email:</label>
+            <input
+              type="email"
+              id="email-aluno"
+              name="email"
+              required
+              autocomplete="email"
+              aria-required="true"
+            />
+          </div>
+          <div class="form-grupo">
+            <label for="senha-aluno">Senha:</label>
+            <input
+              type="password"
+              id="senha-aluno"
+              name="senha"
+              required
+              autocomplete="new-password"
+              aria-required="true"
+              minlength="6"
+            />
+          </div>
+          <button type="submit" class="botao-primario">Cadastrar Aluno</button>
+        </form>
+      </section>
+
+      <section id="listagem-alunos" class="painel-principal">
+        <h2>Alunos Cadastrados</h2>
+        <div id="lista-alunos">
+          <h3>Lista de Alunos</h3>
+          <ul role="list">
+            <li>
+              <div class="aluno-info">
+                <span>Maria Silva</span>
+                <p>maria.s@email.com</p>
+              </div>
+              <button
+                class="btn-excluir-aluno"
+                data-id="101"
+                aria-label="Excluir aluno Maria Silva"
+              >
+                Excluir
+              </button>
+            </li>
+            <li>
+              <div class="aluno-info">
+                <span>João Oliveira</span>
+                <p>joao.o@email.com</p>
+              </div>
+              <button
+                class="btn-excluir-aluno"
+                data-id="102"
+                aria-label="Excluir aluno João Oliveira"
+              >
+                Excluir
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Conecte Saúde. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="Js/trilhas.js"></script>
+    <script src="Js/alunos.js"></script>
+  </body>
+</html>

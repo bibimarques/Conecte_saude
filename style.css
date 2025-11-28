@@ -1,0 +1,340 @@
+/* Estilos Gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+body img {
+  display: block;
+  margin-left: 50px;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.container-2 {
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px 0;
+  background-color: #ffffff;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+header {
+  background-color: #0598bd;
+  color: #ecf0f1;
+  padding: 15px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.8em;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  background-color: #34495e;
+}
+
+main {
+  padding-top: 20px;
+  flex: 1;
+}
+
+.painel-principal {
+  background-color: #ffffff;
+  padding: 30px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+  color: #0598bd;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  font-size: 1.6em;
+}
+
+/* Grid de Trilhas */
+.grid-trilhas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card-trilha {
+  background-color: #f9f9f9;
+  border: 1px solid #531010;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-trilha:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-trilha h3 {
+  color: #0598bd;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.card-trilha p {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.card-trilha .btn-ver-trilha {
+  background-color: #3498db;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.card-trilha .btn-ver-trilha:hover {
+  background-color: #0598bd;
+}
+
+/* Botões do card de trilha */
+.card-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.card-trilha .btn-excluir-trilha {
+  background-color: #e74c3c;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: background-color 0.3s ease;
+}
+
+.card-trilha .btn-excluir-trilha:hover {
+  background-color: #c0392b;
+}
+
+.form-grupo {
+  margin-bottom: 18px;
+}
+
+.form-grupo label {
+  display: block;
+  margin-bottom: 7px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-grupo input[type="text"],
+.form-grupo input[type="email"],
+.form-grupo input[type="password"],
+.form-grupo textarea {
+  width: calc(100% - 22px);
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+}
+
+.form-grupo textarea {
+  resize: vertical;
+}
+
+.botao-primario,
+.botao-secundario {
+  background-color: #27ae60;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+.botao-primario:hover {
+  background-color: #219d55;
+}
+
+.botao-secundario {
+  background-color: #95a5a6;
+}
+
+.botao-secundario:hover {
+  background-color: #839192;
+}
+
+/* Lista de Alunos */
+#lista-alunos ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#lista-alunos li {
+  background-color: #f0f3f5;
+  border: 1px solid #e5e9ec;
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aluno-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-grow: 1;
+}
+
+.aluno-info span {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 3px;
+}
+
+.aluno-info p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.btn-excluir-aluno {
+  background-color: #e74c3c;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.8em;
+  transition: background-color 0.3s ease;
+  margin-left: 15px;
+  flex-shrink: 0;
+}
+
+.btn-excluir-aluno:hover {
+  background-color: #c0392b;
+}
+
+/* Footer */
+footer {
+  background-color: #0598bd;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 30px;
+  font-size: 0.85em;
+}
+
+footer p {
+  margin: 3px 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  header nav ul li {
+    margin-left: 10px;
+  }
+  header nav ul li a {
+    padding: 6px 10px;
+  }
+  .grid-trilhas {
+    grid-template-columns: 1fr;
+  }
+  .container {
+    padding: 15px 0;
+  }
+  header h1 {
+    font-size: 1.5em;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  header nav {
+    float: none;
+    text-align: center;
+  }
+  #lista-alunos li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .btn-excluir-aluno {
+    margin-top: 10px;
+    margin-left: 0;
+    width: 100%;
+  }
+}

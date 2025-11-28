@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conecte Saúde - Cadastrar Trilha</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <img src="assets/logo.svg" alt="Conecte Saúde - Logo" width="300" />
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="index.html" id="link-trilhas">Minhas Trilhas</a></li>
+            <li>
+              <a
+                href="Cadastro_trilha.html"
+                id="link-cadastro-trilha"
+                aria-current="page"
+                >Cadastrar Trilha</a
+              >
+            </li>
+            <li><a href="aluno.html" id="link-alunos">Alunos</a></li>
+            <li><a href="#perfil" id="link-perfil">Meu Perfil</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="cadastro-trilha" class="painel-principal">
+        <h2>Cadastrar Nova Trilha de Aprendizagem</h2>
+        <form id="form-cadastro-trilha">
+          <div class="form-grupo">
+            <label for="nome-trilha">Nome da Trilha:</label>
+            <input type="text" id="nome-trilha" required />
+          </div>
+          <div class="form-grupo">
+            <label for="descricao-trilha">Descrição:</label>
+            <textarea id="descricao-trilha" rows="4"></textarea>
+          </div>
+          <div class="form-grupo">
+            <label for="objetivo-trilha">Objetivo Principal:</label>
+            <input type="text" id="objetivo-trilha" required />
+          </div>
+          <div class="form-grupo">
+            <label for="modulos-trilha">Módulos (separados por vírgula):</label>
+            <input type="text" id="modulos-trilha" />
+          </div>
+          <button type="submit" class="botao-primario">Cadastrar</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="Js/trilhas.js"></script>
+    <script src="Js/alunos.js"></script>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Conecte Saúde. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

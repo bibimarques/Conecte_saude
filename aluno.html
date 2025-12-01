@@ -4,77 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conecte Saúde - Gerenciamento de Alunos</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style/style.css" />
   </head>
   <body>
-    <img src="assets/logo.svg" alt="Conecte Saúde - Logo" width="300" />
     <header>
-      <div class="container">
+      <div class="header-container">
+        <div class="logo">
+          <img src="assets/logo2.svg" alt="Conecte Saúde - Logo" width="300" />
+        </div>
         <nav>
           <ul>
             <li>
-              <a href="index.html" id="link-trilhas">Minhas Trilhas</a>
+              <a href="index.html">Trilhas</a>
             </li>
             <li>
-              <a href="Cadastro_trilha.html" id="link-cadastro-trilha"
-                >Cadastrar Trilha</a
-              >
+              <a href="cadastro_trilha.html">Cadastro de Trilhas</a>
             </li>
             <li>
-              <a href="aluno.html" id="link-alunos" aria-current="page"
-                >Alunos</a
-              >
+              <a href="aluno.html">Alunos</a>
             </li>
             <li>
-              <a href="#perfil" id="link-perfil">Meu Perfil</a>
+              <a href="cadastro_aluno.html">Cadastro de Alunos</a>
             </li>
           </ul>
         </nav>
+        <a href="#" class="btn-estude-na-afya"
+          >Perfil<span class="dropdown-icon">▼</span></a
+        >
       </div>
     </header>
 
     <main class="container">
-      <section id="cadastro-aluno" class="painel-principal">
-        <h2>Cadastrar Novo Aluno</h2>
-        <form id="form-cadastro-aluno" novalidate>
-          <div class="form-grupo">
-            <label for="nome-aluno">Nome Completo:</label>
-            <input
-              type="text"
-              id="nome-aluno"
-              name="nome"
-              required
-              autocomplete="name"
-              aria-required="true"
-            />
-          </div>
-          <div class="form-grupo">
-            <label for="email-aluno">Email:</label>
-            <input
-              type="email"
-              id="email-aluno"
-              name="email"
-              required
-              autocomplete="email"
-              aria-required="true"
-            />
-          </div>
-          <div class="form-grupo">
-            <label for="senha-aluno">Senha:</label>
-            <input
-              type="password"
-              id="senha-aluno"
-              name="senha"
-              required
-              autocomplete="new-password"
-              aria-required="true"
-              minlength="6"
-            />
-          </div>
-          <button type="submit" class="botao-primario">Cadastrar Aluno</button>
-        </form>
-      </section>
-
       <section id="listagem-alunos" class="painel-principal">
         <h2>Alunos Cadastrados</h2>
         <div id="lista-alunos">

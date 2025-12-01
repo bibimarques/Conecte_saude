@@ -24,6 +24,101 @@ body img {
   display: block;
   margin-left: 50px;
 }
+
+/* Header Afya */
+header {
+  background-color: #ffffff;
+  color: #333;
+  padding: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* .logo {
+  font-family: "Brush Script MT", "Lucida Handwriting", "Segoe Script", cursive;
+  font-size: 2.2em;
+  font-weight: normal;
+  font-style: italic;
+  color: #ce0058;
+  cursor: pointer;
+  letter-spacing: -0.5px;
+} */
+
+header nav {
+  float: none;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin: 0;
+}
+
+header nav ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  font-size: 0.95em;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+header nav ul li a:hover {
+  color: #ce0058;
+  background-color: transparent;
+}
+
+.dropdown-icon {
+  font-size: 0.6em;
+  color: inherit;
+  margin-left: 2px;
+  vertical-align: middle;
+}
+
+.btn-estude-na-afya {
+  background-color: #ce0058;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-estude-na-afya:hover {
+  background-color: #a80047;
+}
+
+.btn-estude-na-afya .dropdown-icon {
+  color: #ffffff;
+}
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -43,48 +138,6 @@ body img {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-header {
-  background-color: #0598bd;
-  color: #ecf0f1;
-  padding: 15px 0;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-  margin: 0;
-  display: inline-block;
-  vertical-align: middle;
-  font-size: 1.8em;
-}
-
-header nav {
-  float: right;
-}
-
-header nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-header nav ul li {
-  display: inline-block;
-  margin-left: 20px;
-}
-
-header nav ul li a {
-  color: #ecf0f1;
-  text-decoration: none;
-  padding: 8px 15px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  font-weight: bold;
-}
-
-header nav ul li a:hover {
-  background-color: #34495e;
-}
-
 main {
   padding-top: 20px;
   flex: 1;
@@ -99,8 +152,8 @@ main {
 }
 
 h2 {
-  color: #0598bd;
-  border-bottom: 2px solid #3498db;
+  color: #1a1a1a;
+  border-bottom: 2px solid #ce0058;
   padding-bottom: 10px;
   margin-bottom: 25px;
   font-size: 1.6em;
@@ -114,8 +167,8 @@ h2 {
 }
 
 .card-trilha {
-  background-color: #f9f9f9;
-  border: 1px solid #531010;
+  background-color: #e8eaec;
+  /* border: 1px solid #531010; */
   border-radius: 8px;
   padding: 20px;
   text-align: center;
@@ -126,10 +179,11 @@ h2 {
 .card-trilha:hover {
   transform: translateY(-5px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #1a1a1a;
 }
 
 .card-trilha h3 {
-  color: #0598bd;
+  color: #1a1a1a;
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 1.2em;
@@ -142,11 +196,11 @@ h2 {
 }
 
 .card-trilha .btn-ver-trilha {
-  background-color: #3498db;
-  color: white;
+  background-color: #1a1a1a;
+  color: #ffffff;
   padding: 8px 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 24px;
   cursor: pointer;
   text-decoration: none;
   font-size: 0.9em;
@@ -154,7 +208,7 @@ h2 {
 }
 
 .card-trilha .btn-ver-trilha:hover {
-  background-color: #0598bd;
+  background-color: #49494d;
 }
 
 /* Botões do card de trilha */
@@ -166,11 +220,12 @@ h2 {
 }
 
 .card-trilha .btn-excluir-trilha {
-  background-color: #e74c3c;
-  color: white;
+  background-color: transparent;
+  color: #1a1a1a;
   padding: 8px 15px;
-  border: none;
-  border-radius: 5px;
+  border: 1px solid #e3e1e1;
+  border-radius: 24px;
+  border-color: #666;
   cursor: pointer;
   text-decoration: none;
   font-size: 0.9em;
@@ -178,7 +233,7 @@ h2 {
 }
 
 .card-trilha .btn-excluir-trilha:hover {
-  background-color: #c0392b;
+  background-color: #e3e1e1;
 }
 
 .form-grupo {
@@ -210,11 +265,11 @@ h2 {
 
 .botao-primario,
 .botao-secundario {
-  background-color: #27ae60;
-  color: white;
-  padding: 12px 20px;
+  background-color: #ce0058;
+  color: #ffffff;
+  padding: 10px 15px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 1em;
   transition: background-color 0.3s ease;
@@ -222,7 +277,7 @@ h2 {
 }
 
 .botao-primario:hover {
-  background-color: #219d55;
+  background-color: #a80047;
 }
 
 .botao-secundario {
@@ -289,7 +344,7 @@ h2 {
 
 /* Footer */
 footer {
-  background-color: #0598bd;
+  background-color: #ce0058;
   color: #ecf0f1;
   text-align: center;
   padding: 20px 0;
@@ -306,27 +361,36 @@ html {
 }
 
 @media (max-width: 768px) {
-  header nav ul li {
-    margin-left: 10px;
+  .header-container {
+    flex-direction: column;
+    padding: 15px 20px;
+    gap: 15px;
   }
+
+  .logo {
+    font-size: 1.5em;
+  }
+
+  header nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
   header nav ul li a {
-    padding: 6px 10px;
+    font-size: 0.85em;
   }
+
+  .btn-estude-na-afya {
+    width: 100%;
+    justify-content: center;
+  }
+
   .grid-trilhas {
     grid-template-columns: 1fr;
   }
   .container {
     padding: 15px 0;
-  }
-  header h1 {
-    font-size: 1.5em;
-    display: block;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-  header nav {
-    float: none;
-    text-align: center;
   }
   #lista-alunos li {
     flex-direction: column;

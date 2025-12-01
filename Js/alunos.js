@@ -63,14 +63,16 @@ document.addEventListener("DOMContentLoaded", () => {
       const senha = qs("#senha-aluno").value;
       if (!nome || !email || !senha)
         return alert("Por favor, preencha todos os campos obrigatórios.");
+      if (senha.length < 6)
+        return alert("Senha deve ter no mínimo 6 caracteres.");
       if (alunos.some((al) => al.email === email))
         return alert("Este email já está cadastrado!");
 
+      // Não armazenar senha em localStorage (sensível). Salvamos somente dados não sensíveis.
       const novo = {
         id: alunos.length ? Math.max(...alunos.map((a) => a.id)) + 1 : 101,
         nome,
         email,
-        senha,
       };
       alunos.push(novo);
       save(alunos);

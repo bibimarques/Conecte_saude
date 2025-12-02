@@ -1,10 +1,6 @@
 
-# Nome do Projeto
-Conecte Saude.
-
-# Projeto: Listagem de Aprendizagem
-
-
+# Conecte Saúde
+Projeto desenvolvido para a conclusão do curso Code Wise, oferecido pelo Senai.
 
 # Modelagem UML<> Back end.
 

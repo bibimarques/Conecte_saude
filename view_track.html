@@ -6,7 +6,6 @@
     <title>Conecta Saúde</title>
     <link rel="stylesheet" href="Style/style.css" />
     <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32" />
-
   </head>
   <body>
     <header>
@@ -64,23 +63,29 @@
     </header>
 
     <main class="container">
-      <section id="tracks-available" class="main-panel">
-        <h2>Trilhas de Aprendizagem Disponíveis</h2>
-        <div id="tracks-list" class="grid-tracks">
-          <p>Carregando trilhas...</p>
+      <section class="main-panel">
+        <a href="index.html" class="back-link">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 12H5"></path>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Voltar para Trilhas
+        </a>
+        
+        <div id="track-detail">
+          <p>Carregando detalhes da trilha...</p>
         </div>
       </section>
     </main>
-    <script src="JavaScript/tracks.js"></script>
-    <script src="JavaScript/students.js"></script>
-    <script src="JavaScript/profile-dropdown.js"></script>
+
     <footer>
       <div class="container">
         <p>&copy; 2025 Conecta Saúde. Todos os direitos reservados.</p>
-        <p>
-          Desenvolvido por:  Gabriella Marques, Iago Rodrigues, Renan Rocha, André Barbosa, João Victor Mendes, Raphael Bicalho e Alexandre Silveira.
-        </p>
       </div>
     </footer>
+
+    <script src="JavaScript/view-track.js"></script>
+    <script src="JavaScript/profile-dropdown.js"></script>
   </body>
 </html>
+

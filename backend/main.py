@@ -25,6 +25,83 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# ---------------- ADMIN ----------------
+
+@app.post("/admin/", response_model=schemas.AdminOut, status_code=status.HTTP_201_CREATED)
+def create_admin(admin: schemas.AdminCreate, db: Session = Depends(get_db)):
+    """Create a new admin"""
+    existing = db.query(models.Admin).filter(models.Admin.email == admin.email).first()
+    if existing:
+        raise HTTPException(
+            status_code=400,
+            detail="An admin with this email already exists."
+        )
+
+    db_admin = models.Admin(**admin.dict())
+    db.add(db_admin)
+    db.commit()
+    db.refresh(db_admin)
+    return db_admin
+
+
+@app.get("/admin/", response_model=List[schemas.AdminOut])
+def list_admins(db: Session = Depends(get_db)):
+    """Return all admins"""
+    return db.query(models.Admin).all()
+
+
+@app.get("/admin/{admin_id}", response_model=schemas.AdminOut)
+def get_admin(admin_id: int, db: Session = Depends(get_db)):
+    """Get one admin by ID"""
+    admin = db.query(models.Admin).filter(models.Admin.id == admin_id).first()
+    if not admin:
+        raise HTTPException(status_code=404, detail="Admin not found.")
+    return admin
+
+
+@app.put("/admin/{admin_id}", response_model=schemas.AdminOut)
+def update_admin(admin_id: int, data: schemas.AdminUpdate, db: Session = Depends(get_db)):
+    """Update admin profile"""
+    admin = db.query(models.Admin).filter(models.Admin.id == admin_id).first()
+    if not admin:
+        raise HTTPException(status_code=404, detail="Admin not found.")
+
+    for field, value in data.dict(exclude_unset=True).items():
+        setattr(admin, field, value)
+
+    db.commit()
+    db.refresh(admin)
+    return admin
+
+
+@app.put("/admin/{admin_id}/password")
+def update_admin_password(admin_id: int, data: schemas.AdminPasswordUpdate, db: Session = Depends(get_db)):
+    """Update admin password"""
+    admin = db.query(models.Admin).filter(models.Admin.id == admin_id).first()
+    if not admin:
+        raise HTTPException(status_code=404, detail="Admin not found.")
+
+    # Verify current password
+    if admin.password != data.current_password:
+        raise HTTPException(status_code=400, detail="Current password is incorrect.")
+
+    admin.password = data.new_password
+    db.commit()
+    return {"message": "Password updated successfully."}
+
+
+@app.delete("/admin/{admin_id}", status_code=status.HTTP_204_NO_CONTENT)
+def delete_admin(admin_id: int, db: Session = Depends(get_db)):
+    """Delete an admin"""
+    admin = db.query(models.Admin).filter(models.Admin.id == admin_id).first()
+    if not admin:
+        raise HTTPException(status_code=404, detail="Admin not found.")
+
+    db.delete(admin)
+    db.commit()
+    return None
+
+
 # ---------------- STUDENTS ----------------
 
 @app.post("/students/", response_model=schemas.StudentOut, status_code=status.HTTP_201_CREATED)

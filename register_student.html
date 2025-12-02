@@ -6,7 +6,6 @@
     <title>Conecta Saúde</title>
     <link rel="stylesheet" href="Style/style.css" />
     <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32" />
-
   </head>
   <body>
     <header>
@@ -62,25 +61,55 @@
         </div>
       </div>
     </header>
-
     <main class="container">
-      <section id="tracks-available" class="main-panel">
-        <h2>Trilhas de Aprendizagem Disponíveis</h2>
-        <div id="tracks-list" class="grid-tracks">
-          <p>Carregando trilhas...</p>
-        </div>
+      <section id="register-student" class="main-panel">
+        <h2>Cadastrar Novo Aluno</h2>
+        <form id="form-register-student" novalidate>
+          <div class="form-group">
+            <label for="student-name">Nome Completo:</label>
+            <input
+              type="text"
+              id="student-name"
+              name="nome"
+              required
+              autocomplete="name"
+              aria-required="true"
+            />
+          </div>
+          <div class="form-group">
+            <label for="student-email">Email:</label>
+            <input
+              type="email"
+              id="student-email"
+              name="email"
+              required
+              autocomplete="email"
+              aria-required="true"
+            />
+          </div>
+          <div class="form-group">
+            <label for="student-password">Senha:</label>
+            <input
+              type="password"
+              id="student-password"
+              name="senha"
+              required
+              autocomplete="new-password"
+              aria-required="true"
+              minlength="6"
+            />
+          </div>
+          <button type="submit" class="primary-btn">Cadastrar Aluno</button>
+        </form>
       </section>
     </main>
-    <script src="JavaScript/tracks.js"></script>
-    <script src="JavaScript/students.js"></script>
-    <script src="JavaScript/profile-dropdown.js"></script>
     <footer>
       <div class="container">
         <p>&copy; 2025 Conecta Saúde. Todos os direitos reservados.</p>
-        <p>
-          Desenvolvido por:  Gabriella Marques, Iago Rodrigues, Renan Rocha, André Barbosa, João Victor Mendes, Raphael Bicalho e Alexandre Silveira.
-        </p>
       </div>
     </footer>
+    <script src="JavaScript/students.js"></script>
+    <script src="JavaScript/profile-dropdown.js"></script>
   </body>
 </html>
+

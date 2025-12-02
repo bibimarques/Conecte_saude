@@ -1,6 +1,38 @@
 # backend/schemas.py
-from datetime import date
+from datetime import date, datetime
 from pydantic import BaseModel
+
+
+# ---------------- ADMIN ----------------
+
+class AdminBase(BaseModel):
+    name: str
+    email: str
+    role: str | None = None
+
+
+class AdminCreate(AdminBase):
+    password: str
+
+
+class AdminUpdate(BaseModel):
+    name: str | None = None
+    email: str | None = None
+    role: str | None = None
+
+
+class AdminPasswordUpdate(BaseModel):
+    current_password: str
+    new_password: str
+
+
+class AdminOut(AdminBase):
+    id: int
+    created_at: datetime | None = None
+    updated_at: datetime | None = None
+
+    class Config:
+        from_attributes = True
 
 
 # ---------------- TRACK ----------------

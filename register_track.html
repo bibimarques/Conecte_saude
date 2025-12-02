@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Conecte Saúde - Cadastrar Trilha</title>
-    <link rel="stylesheet" href="style/style.css" />
+    <title>Conecta Saúde</title>
+    <link rel="stylesheet" href="Style/style.css" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" sizes="32x32" />
   </head>
   <body>
     <header>
       <div class="header-container">
         <div class="logo">
-          <img src="assets/logo2.svg" alt="Conecte Saúde - Logo" width="300" />
+          <img src="assets/logo.svg" alt="Conecte Saúde - Logo" width="300" />
         </div>
         <nav>
           <ul>
@@ -24,13 +25,40 @@
               <a href="student.html">Alunos</a>
             </li>
             <li>
-              <a href="register_students.html">Cadastro de Alunos</a>
+              <a href="register_student.html">Cadastro de Alunos</a>
             </li>
           </ul>
         </nav>
-        <a href="#" class="btn-profile"
-          >Perfil<span class="dropdown-icon">▼</span></a
-        >
+        <div class="profile-dropdown">
+          <button class="btn-profile" id="profile-btn">
+            Perfil<span class="dropdown-icon">▼</span>
+          </button>
+          <div class="profile-menu" id="profile-menu">
+            <a href="settings.html" class="profile-menu-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+              </svg>
+              Configurações
+            </a>
+            <a href="help.html" class="profile-menu-item">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <circle cx="12" cy="17" r="0.75" fill="currentColor" stroke="none"></circle>
+              </svg>
+              Ajuda
+            </a>
+            <a href="#" class="profile-menu-item logout">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                <polyline points="16 17 21 12 16 7"></polyline>
+                <line x1="21" y1="12" x2="9" y2="12"></line>
+              </svg>
+              Sair da conta
+            </a>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -59,13 +87,15 @@
       </section>
     </main>
 
-    <script src="Js/tracks.js"></script>
-    <script src="Js/students.js"></script>
+    <script src="JavaScript/tracks.js"></script>
+    <script src="JavaScript/students.js"></script>
+    <script src="JavaScript/profile-dropdown.js"></script>
 
     <footer>
       <div class="container">
-        <p>&copy; 2025 Conecte Saúde. Todos os direitos reservados.</p>
+        <p>&copy; 2025 Conecta Saúde. Todos os direitos reservados.</p>
       </div>
     </footer>
   </body>
 </html>
+

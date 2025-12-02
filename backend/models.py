@@ -1,8 +1,21 @@
 # backend/models.py
-from sqlalchemy import Column, Integer, String, Date, Text, ForeignKey
+from sqlalchemy import Column, Integer, String, Date, Text, ForeignKey, DateTime
 from sqlalchemy.orm import relationship
+from datetime import datetime
 
 from database import Base
+
+
+class Admin(Base):
+    __tablename__ = "admins"
+
+    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    name = Column(String(100), nullable=False)
+    email = Column(String(100), nullable=False, unique=True, index=True)
+    password = Column(String(255), nullable=False)
+    role = Column(String(100))  # Cargo do administrador
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
 
 
 class Student(Base):

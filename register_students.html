@@ -18,52 +18,52 @@
               <a href="index.html">Trilhas</a>
             </li>
             <li>
-              <a href="cadastro_trilha.html">Cadastro de Trilhas</a>
+              <a href="register_track.html">Cadastro de Trilhas</a>
             </li>
             <li>
-              <a href="aluno.html">Alunos</a>
+              <a href="student.html">Alunos</a>
             </li>
             <li>
-              <a href="cadastro_aluno.html">Cadastro de Alunos</a>
+              <a href="register_students.html">Cadastro de Alunos</a>
             </li>
           </ul>
         </nav>
-        <a href="#" class="btn-estude-na-afya"
+        <a href="#" class="btn-profile"
           >Perfil<span class="dropdown-icon">▼</span></a
         >
       </div>
     </header>
     <main class="container">
-      <section id="cadastro-aluno" class="painel-principal">
+      <section id="register-student" class="main-panel">
         <h2>Cadastrar Novo Aluno</h2>
-        <form id="form-cadastro-aluno" novalidate>
-          <div class="form-grupo">
-            <label for="nome-aluno">Nome Completo:</label>
+        <form id="form-register-student" novalidate>
+          <div class="form-group">
+            <label for="student-name">Nome Completo:</label>
             <input
               type="text"
-              id="nome-aluno"
+              id="student-name"
               name="nome"
               required
               autocomplete="name"
               aria-required="true"
             />
           </div>
-          <div class="form-grupo">
-            <label for="email-aluno">Email:</label>
+          <div class="form-group">
+            <label for="student-email">Email:</label>
             <input
               type="email"
-              id="email-aluno"
+              id="student-email"
               name="email"
               required
               autocomplete="email"
               aria-required="true"
             />
           </div>
-          <div class="form-grupo">
-            <label for="senha-aluno">Senha:</label>
+          <div class="form-group">
+            <label for="student-password">Senha:</label>
             <input
               type="password"
-              id="senha-aluno"
+              id="student-password"
               name="senha"
               required
               autocomplete="new-password"
@@ -71,7 +71,7 @@
               minlength="6"
             />
           </div>
-          <button type="submit" class="botao-primario">Cadastrar Aluno</button>
+          <button type="submit" class="primary-btn">Cadastrar Aluno</button>
         </form>
       </section>
     </main>
@@ -80,6 +80,6 @@
         <p>&copy; 2025 Conecte Saúde. Todos os direitos reservados.</p>
       </div>
     </footer>
-    <script src="Js/alunos.js"></script>
+    <script src="Js/students.js"></script>
   </body>
 </html>
